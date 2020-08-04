@@ -8,4 +8,10 @@ compute[a*b+c]=[$(($(($a*$b))+$c))]
 compute[c+a/b]=[$(($c+$(($a/$b))))]
 compute[a%b+c]=[$(($(($a%$b))+$c))]
 
+for i in ${compute[@]}
+do
+   	array[j++]=$i
+done
+
+
 
