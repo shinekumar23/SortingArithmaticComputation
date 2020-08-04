@@ -28,4 +28,12 @@ do
 done
 echo "The sorted array in Descending order: ${array[@]}"
 
-
+arraySize=4
+for (( j=0; j<$arraySize; j++ ))
+do
+   temp=${array[$j]}
+   array[$j]=${array[$arraySize]}
+   array[$arraySize]=$temp
+   ((arraySize--))
+done
+echo "The Sorted array in Ascending order ${array[@]}"
